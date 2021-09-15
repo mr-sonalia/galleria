@@ -1,5 +1,6 @@
 $tile-gap: 4rem;
 $column-count: 4;
+$match-container-padding: 8rem;
 
 %header--inner {
 	width: 100%;
@@ -17,7 +18,7 @@ $column-count: 4;
 }
 
 %main-container {
-	padding-top: 8rem;
+	padding-top: 8.3rem;
 }
 
 %nav {
@@ -35,8 +36,9 @@ $column-count: 4;
 }
 
 @media (max-width: 1920px) {
+	$match-container-padding: 8rem;
 	%container {
-		padding: 0rem 8rem;
+		padding: 0rem $match-container-padding;
 	}
 	%header {
 		padding: 3rem 0rem;
@@ -56,7 +58,7 @@ $column-count: 4;
 	}
 
 	%masonry {
-		padding: $tile-gap 0;
+		padding: $match-container-padding 0;
 		column-count: $column-count;
 		column-gap: $tile-gap;
 	}
@@ -66,11 +68,12 @@ $column-count: 4;
 	}
 }
 @media (max-width: 1400px) {
+	$match-container-padding: 6rem;
 	$tile-gap: 4rem;
 	$column-count: 4;
 
 	%container {
-		padding: 0rem 6rem;
+		padding: 0rem $match-container-padding;
 	}
 	%header {
 		padding: 2rem 0rem;
@@ -85,7 +88,7 @@ $column-count: 4;
 	}
 
 	%masonry {
-		padding: $tile-gap 0;
+		padding: $match-container-padding 0;
 		column-count: $column-count;
 		column-gap: $tile-gap;
 	}
@@ -95,6 +98,7 @@ $column-count: 4;
 }
 
 @media (max-width: 1000px) {
+	$match-container-padding: 6rem;
 	$tile-gap: 3rem;
 	$column-count: 3;
 
@@ -107,7 +111,7 @@ $column-count: 4;
 		}
 	}
 	%masonry {
-		padding: $tile-gap 0;
+		padding: $match-container-padding 0;
 		column-count: $column-count;
 		column-gap: $tile-gap;
 	}
@@ -117,11 +121,12 @@ $column-count: 4;
 }
 
 @media (max-width: 768px) {
+	$match-container-padding: 4rem;
 	$column-count: 2;
 	$tile-gap: 2rem;
 
 	%container {
-		padding: 0rem 4rem;
+		padding: 0rem $match-container-padding;
 	}
 	%header {
 		padding: 2rem 0rem;
@@ -150,7 +155,7 @@ $column-count: 4;
 	}
 
 	%masonry {
-		padding: $tile-gap 0;
+		padding: $match-container-padding 0;
 		column-count: $column-count;
 		column-gap: $tile-gap;
 	}
@@ -160,13 +165,18 @@ $column-count: 4;
 	}
 }
 @media (max-width: 500px) {
+	$match-container-padding: 2rem;
 	$column-count: 1;
 	$tile-gap: 1rem;
 	%container {
-		padding: 0rem 2rem;
+		padding: 0rem $match-container-padding;
 	}
 	%header {
 		padding: 1rem 0rem;
+	}
+
+	%logo-container {
+		flex: 3;
 	}
 
 	%nav {
@@ -178,7 +188,7 @@ $column-count: 4;
 		}
 	}
 	%masonry {
-		padding: $tile-gap 0;
+		padding: $match-container-padding 0;
 		column-count: $column-count;
 		column-gap: $tile-gap;
 	}
@@ -187,6 +197,6 @@ $column-count: 4;
 	}
 
 	%main-container {
-		padding-top: 6rem;
+		padding-top: 6.3rem;
 	}
 }
