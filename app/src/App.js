@@ -1,6 +1,6 @@
 import LoadingScreen from "./components/UI/LoadingScreen";
 import { Fragment, useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+// import { Switch, Route } from "react-router-dom";
 import { readDB } from "./helpers";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
