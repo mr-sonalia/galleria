@@ -1,6 +1,6 @@
 import LoadingScreen from "./components/UI/LoadingScreen";
 import { Fragment, useEffect, useState } from "react";
-// import { Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { readDB } from "./helpers";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
@@ -26,10 +26,9 @@ const App = (props) => {
 			{loading && <LoadingScreen />}
 			<Fragment>
 				<Header />
-				{/* <Switch>
+				<Switch>
 					<Route path="/" component={() => <Home data={res} />} exact></Route>
-				</Switch> */}
-				<Home data={res} />
+				</Switch>
 				<Footer />
 			</Fragment>
 		</Fragment>
