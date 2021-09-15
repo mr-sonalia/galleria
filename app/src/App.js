@@ -26,9 +26,10 @@ const App = (props) => {
 			{loading && <LoadingScreen />}
 			<Fragment>
 				<Header />
-				<Switch>
+				{/* <Switch>
 					<Route path="/" component={() => <Home data={res} />} exact></Route>
-				</Switch>
+				</Switch> */}
+				<Home data={res} />
 				<Footer />
 			</Fragment>
 		</Fragment>

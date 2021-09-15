@@ -7,9 +7,10 @@ import "./scss/index.scss";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<BrowserRouter>
+		{/* <BrowserRouter>
 			<App />
-		</BrowserRouter>
+		</BrowserRouter> */}
+		<App />
 	</React.StrictMode>,
 	document.getElementById("root")
 );
