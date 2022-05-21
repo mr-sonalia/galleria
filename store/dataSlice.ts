@@ -22,7 +22,7 @@ const dataSlice = createSlice({
         state.loading = action.payload.loading;
         state.error = action.payload.error;
 
-        console.log(state.posts);
+        // console.log(state.posts);
       }
     },
     setUpdatedData: (

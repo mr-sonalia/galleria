@@ -47,7 +47,7 @@ const Home: NextPage<Props> = ({ data }) => {
 
 export default Home;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const response = await getDocs(collection(db, IMAGES_PATH));
   const data = response.docs;
 
