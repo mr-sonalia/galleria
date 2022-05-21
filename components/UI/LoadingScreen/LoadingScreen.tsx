@@ -14,7 +14,7 @@ const LoadingScreen: NextPage<Props> = (props) => {
     if (props.loading) {
       timeout = setTimeout(() => {
         setRemoveScreen(true);
-      }, 3000);
+      }, 2000);
     }
   }, [props.loading === false]);
 
