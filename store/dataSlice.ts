@@ -25,13 +25,16 @@ const dataSlice = createSlice({
         console.log(state.posts);
       }
     },
-    setLikes: (state: DataState, action: PayloadAction<{ likes: number; stateIndex: number }>) => {
-      state.posts[action.payload.stateIndex].likes = action.payload.likes;
+    setUpdatedData: (
+      state: DataState,
+      action: PayloadAction<{ updatedData: PostType; stateIndex: number }>
+    ) => {
+      state.posts[action.payload.stateIndex] = action.payload.updatedData;
     },
   },
 });
 
-export const { setDataFetchedFromServer, setLikes } = dataSlice.actions;
+export const { setDataFetchedFromServer, setUpdatedData } = dataSlice.actions;
 
 export const setLikesDB = (data: PostType, stateIndex: number) => async (dispatch: AppDispatch) => {
   const updatedData: PostType = { ...data, likes: data.likes + 1 };
@@ -41,8 +44,8 @@ export const setLikesDB = (data: PostType, stateIndex: number) => async (dispatc
       ...updatedData,
     });
     dispatch(
-      setLikes({
-        likes: data.likes + 1,
+      setUpdatedData({
+        updatedData,
         stateIndex,
       })
     );
