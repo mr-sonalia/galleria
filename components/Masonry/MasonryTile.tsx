@@ -22,7 +22,6 @@ const MasonryTile = (props: Props) => {
   };
 
   const clickHandler = () => {
-    // console.log(props.item)
   };
 
   return (
