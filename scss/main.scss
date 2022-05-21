@@ -120,10 +120,15 @@ main.container {
 .masonry--tile {
   @extend %masonry--tile;
   width: fit-content;
+
   position: relative;
   z-index: 2;
   overflow: hidden;
+
+  border-radius: 1rem;
+
   cursor: pointer;
+
   background-color: var(--clr-solid-black-20);
   &-overlay {
     width: 100%;
@@ -185,6 +190,7 @@ main.container {
     }
   }
   &:hover {
+    
     .masonry--tile-overlay {
       bottom: 0rem;
 

@@ -21,27 +21,17 @@ const MasonryTile = (props: Props) => {
     dispatch(setLikesDB(props.item, props.stateIndex));
   };
 
-  /* 
-  <motion.div
-    initial={{ opacity: 0, y: 100 }}
-    whileInView={{
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        bounce: 0.4,
-        duration: 0.8,
-      },
-    }}
-    viewport={{ once: true }}
-  >
-  
-  </motion.div>  */
+  const clickHandler = () => {
+    // console.log(props.item)
+  };
+
   return (
     <div className="masonry--tile">
       <div className="masonry--tile-overlay">
         <div className="headings">
-          <h4 className="h4">{props.item.title}</h4>
+          <h4 className="h4" onClick={clickHandler}>
+            {props.item.title}
+          </h4>
           <h5 className="h5">{contributors}</h5>
         </div>
         <div className="likes">
@@ -55,7 +45,6 @@ const MasonryTile = (props: Props) => {
         className="masonry--tile-image"
         src={props.item.src}
         alt={props.item.title}
-        loading={"lazy"}
       />
     </div>
   );
